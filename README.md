@@ -48,7 +48,7 @@ Die App kennt zwei Stimmungen. Bis zum großen Tag läuft der **Countdown**: dir
 - **Fax / Stille Post** — dein Leben als Zeitstrahl, Jahrzehnt für Jahrzehnt.
 - **Ruhestand-Modus** — Auszeichnungen und Konfetti, sobald der Tag gekommen ist.
 - **Native Widgets** — Countdown auf dem Sperrbildschirm (iOS, inkl. Live Activity) und auf dem Homescreen (iOS & Android).
-- **Kaffee für die Oma** — ein freiwilliger In-App-Tipp, mehr nicht.
+- **Kaffee für die Oma** — wer mag, spendiert der Oma per In-App-Tipp obendrauf eine Tasse.
 - **Deine Daten bleiben bei dir** — kein Konto, kein Login, kein Tracking, keine Werbung.
 
 ## Plattform & Technik
@@ -75,7 +75,7 @@ Renten Countdown erhebt **keine personenbezogenen Daten**: kein Konto, kein Trac
 
 ## Verfügbarkeit
 
-Bald im App Store und im Play Store. Bis dahin führt die [Website](https://bt-tran.github.io/Renten-Countdown/) automatisch zum passenden Store, sobald er bereitsteht.
+Bald im App Store und im Play Store — **einmaliger Kauf für 0,99 €, kein Abo** (plus optionaler Kaffee-Tipp für die Oma). Bis dahin führt die [Website](https://bt-tran.github.io/Renten-Countdown/) automatisch zum passenden Store, sobald er bereitsteht.
 
 ## Impressum & Kontakt
 

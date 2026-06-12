@@ -60,6 +60,12 @@
       background: transparent;
     }
     .store-btn[hidden] { display: none; }
+    .legal {
+      position: fixed; left: 0; right: 0; bottom: 14px;
+      text-align: center; font-size: 12px;
+    }
+    .legal a { color: var(--secondary); text-decoration: none; }
+    .legal a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -82,6 +88,10 @@
     </div>
     <p class="hint" id="soon">Bald im App&nbsp;Store &amp; Play&nbsp;Store.</p>
   </main>
+
+  <footer class="legal">
+    <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a>
+  </footer>
 
   <script>
     (function () {

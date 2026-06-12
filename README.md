@@ -19,7 +19,13 @@ Der ehrliche Countdown bis zur Rente.
 
 <br />
 
-<img src="assets/feature-graphic.png" width="100%" alt="Renten Countdown — der ehrliche Countdown bis zur Rente" />
+<p align="center">
+  <img src="assets/screenshot-countdown.png" width="40%" alt="Countdown vor der Rente" />
+  &nbsp;&nbsp;
+  <img src="assets/screenshot-ruhestand.png" width="40%" alt="Ruhestand-Modus" />
+</p>
+
+<p align="center"><sub>Zwei Phasen, eine App: links der ehrliche Countdown — rechts der warme Ruhestand-Modus, wenn es so weit ist.</sub></p>
 
 ## Über die App
 
@@ -44,16 +50,6 @@ Die App kennt zwei Stimmungen. Bis zum großen Tag läuft der **Countdown**: dir
 - **Native Widgets** — Countdown auf dem Sperrbildschirm (iOS, inkl. Live Activity) und auf dem Homescreen (iOS & Android).
 - **Kaffee für die Oma** — ein freiwilliger In-App-Tipp, mehr nicht.
 - **Deine Daten bleiben bei dir** — kein Konto, kein Login, kein Tracking, keine Werbung.
-
-## Screenshots
-
-<p align="center">
-  <img src="assets/screenshot-countdown.png" width="32%" alt="Countdown vor der Rente" />
-  &nbsp;&nbsp;
-  <img src="assets/screenshot-ruhestand.png" width="32%" alt="Ruhestand-Modus" />
-</p>
-
-<p align="center"><sub>Links: der Countdown vor der Rente. Rechts: der warme Ruhestand-Modus.</sub></p>
 
 ## Plattform & Technik
 

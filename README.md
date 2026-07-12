@@ -13,7 +13,7 @@ Der ehrliche Countdown bis zur Rente.
 &nbsp;![Status](https://img.shields.io/badge/Status-Bald%20verf%C3%BCgbar-9C7A2E)
 &nbsp;![Lizenz](https://img.shields.io/badge/Lizenz-propriet%C3%A4r-8B1A1A)
 
-**[Website](https://bt-tran.github.io/Renten-Countdown/)** · **[Datenschutz](https://bt-tran.github.io/Renten-Countdown/datenschutz.html)** · **[Impressum](https://bt-tran.github.io/Renten-Countdown/impressum.html)**
+**[Website](https://traja-projects.github.io/Renten-Countdown/)** · **[Datenschutz](https://traja-projects.github.io/Renten-Countdown/datenschutz.html)** · **[Impressum](https://traja-projects.github.io/Renten-Countdown/impressum.html)**
 
 </div>
 
@@ -59,7 +59,7 @@ Gebaut mit **Flutter / Dart**. Läuft auf **iOS 16+** und **Android 6+ (API 23)*
 
 ## Über dieses Repository
 
-Dieses Repo enthält die **offizielle Website** zur App, veröffentlicht über GitHub Pages aus dem Ordner [`docs/`](docs/) → **https://bt-tran.github.io/Renten-Countdown/**
+Dieses Repo enthält die **offizielle Website** zur App, veröffentlicht über GitHub Pages aus dem Ordner [`docs/`](docs/) → **https://traja-projects.github.io/Renten-Countdown/**
 
 | Seite | Zweck |
 |---|---|
@@ -71,17 +71,17 @@ Dieses Repo enthält die **offizielle Website** zur App, veröffentlicht über G
 
 ## Datenschutz
 
-Renten Countdown erhebt **keine personenbezogenen Daten**: kein Konto, kein Tracking, keine Werbung. Alles, was du eingibst, bleibt lokal auf deinem Gerät. Details in der [Datenschutzerklärung](https://bt-tran.github.io/Renten-Countdown/datenschutz.html).
+Renten Countdown erhebt **keine personenbezogenen Daten**: kein Konto, kein Tracking, keine Werbung. Alles, was du eingibst, bleibt lokal auf deinem Gerät. Details in der [Datenschutzerklärung](https://traja-projects.github.io/Renten-Countdown/datenschutz.html).
 
 ## Verfügbarkeit
 
-Bald im App Store und im Play Store — **einmaliger Kauf für 0,99 €, kein Abo** (plus optionaler Kaffee-Tipp für die Oma). Bis dahin führt die [Website](https://bt-tran.github.io/Renten-Countdown/) automatisch zum passenden Store, sobald er bereitsteht.
+Bald im App Store und im Play Store — **einmaliger Kauf für 0,99 €, kein Abo** (plus optionaler Kaffee-Tipp für die Oma). Bis dahin führt die [Website](https://traja-projects.github.io/Renten-Countdown/) automatisch zum passenden Store, sobald er bereitsteht.
 
 ## Impressum & Kontakt
 
 Bao Anh Tran · Nürnberg · [tran-bao-anh@outlook.de](mailto:tran-bao-anh@outlook.de)
 
-Vollständige Angaben im [Impressum](https://bt-tran.github.io/Renten-Countdown/impressum.html).
+Vollständige Angaben im [Impressum](https://traja-projects.github.io/Renten-Countdown/impressum.html).
 
 ## Lizenz
 

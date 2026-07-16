@@ -171,9 +171,13 @@
       padding: 26px 26px 22px;
       position: relative;
     }
+    /* Oma lugt hinter der Karte hervor: z-index -1 legt sie hinter deren
+       Hintergrund, sodass die Rahmenlinie sie sauber abschneidet — statt dass
+       der Bildrand mitten im Kasten abbricht. */
     .counter-oma {
-      position: absolute; right: -18px; top: -74px;
-      width: 132px; pointer-events: none;
+      position: absolute; right: 20px; top: -112px;
+      width: 140px; pointer-events: none;
+      z-index: -1;
     }
     .counter label {
       display: block;
@@ -218,7 +222,7 @@
 
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; gap: 76px; }
-      .counter-oma { width: 104px; right: 0; top: -62px; }
+      .counter-oma { width: 112px; right: 14px; top: -90px; }
     }
 
     /* ── Die zwei Phasen ────────────────────────────────────────────────── */

@@ -173,9 +173,11 @@
     }
     /* Oma lugt hinter der Karte hervor: z-index -1 legt sie hinter deren
        Hintergrund, sodass die Rahmenlinie sie sauber abschneidet — statt dass
-       der Bildrand mitten im Kasten abbricht. */
+       der Bildrand mitten im Kasten abbricht.
+       Links, weil sie in der Zeichnung nach rechts blickt: von hier schaut sie
+       in die Karte hinein (Frage + Zahl), nicht aus der Seite hinaus. */
     .counter-oma {
-      position: absolute; right: 20px; top: -112px;
+      position: absolute; left: 18px; top: -112px;
       width: 140px; pointer-events: none;
       z-index: -1;
     }
@@ -221,8 +223,9 @@
     }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 76px; }
-      .counter-oma { width: 112px; right: 14px; top: -90px; }
+      /* gap groß genug, dass Omas Kopf nicht in die Preiszeile darüber ragt. */
+      .hero-grid { grid-template-columns: 1fr; gap: 108px; }
+      .counter-oma { width: 112px; left: 14px; top: -90px; }
     }
 
     /* ── Die zwei Phasen ────────────────────────────────────────────────── */

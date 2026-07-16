@@ -163,69 +163,22 @@
     .store-btn.is-soon:hover { background: transparent; border-color: var(--border); }
     .price-note { margin-top: 14px; font-size: 13px; color: var(--secondary); }
 
-    /* ── Signature: der lebende Countdown ───────────────────────────────── */
-    .counter {
+    /* ── Hero-Illustration ──────────────────────────────────────────────── */
+    .hero-art { margin: 0; }
+    .hero-art img {
+      width: 100%;
       border: var(--rule) solid var(--border);
       border-radius: var(--radius);
-      background: var(--bg);
-      padding: 26px 26px 22px;
-      position: relative;
     }
-    /* Oma lugt hinter der Karte hervor: z-index -1 legt sie hinter deren
-       Hintergrund, sodass die Rahmenlinie sie sauber abschneidet — statt dass
-       der Bildrand mitten im Kasten abbricht.
-       Links, weil sie in der Zeichnung nach rechts blickt: von hier schaut sie
-       in die Karte hinein (Frage + Zahl), nicht aus der Seite hinaus. */
-    .counter-oma {
-      position: absolute; left: 18px; top: -112px;
-      width: 140px; pointer-events: none;
-      z-index: -1;
-    }
-    .counter label {
-      display: block;
-      font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      color: var(--secondary); margin-bottom: 10px;
-    }
-    .counter input[type="date"] {
-      width: 100%; min-height: 54px;
-      font-family: var(--font); font-size: 18px; font-weight: 700; color: var(--ink);
-      background: var(--bg); border: var(--rule) solid var(--border); border-radius: var(--radius);
-      padding: 10px 14px;
-    }
-    .counter input[type="date"]:focus { border-color: var(--accent); }
-    .readout { text-align: center; padding: 24px 0 8px; }
-    .readout .big {
-      font-size: clamp(56px, 9vw, 92px); font-weight: 900; color: var(--accent);
-      line-height: 1; letter-spacing: -1px;
-      font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1;
-    }
-    .readout .unit {
-      font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
-      color: var(--ink); margin-top: 10px;
-    }
-    .readout .said { margin-top: 12px; font-size: 15px; }
-    .breakdown {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      border-top: var(--rule) solid var(--border);
-      margin-top: 6px;
-    }
-    /* min-width:0 + Umbruch: sonst spannt ein langes Label wie
-       „Zeitumstellungen" die Spalte auf und die ganze Seite scrollt seitlich. */
-    .breakdown > div { padding: 16px 6px 4px; text-align: center; min-width: 0; }
-    .breakdown .n {
-      font-size: 22px; font-weight: 900; color: var(--ink);
-      font-variant-numeric: tabular-nums;
-    }
-    .breakdown .l {
-      font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      color: var(--secondary); margin-top: 3px;
-      overflow-wrap: anywhere; hyphens: auto;
+    .hero-art figcaption {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 16px;
+      color: var(--ink);
     }
 
     @media (max-width: 900px) {
-      /* gap groß genug, dass Omas Kopf nicht in die Preiszeile darüber ragt. */
-      .hero-grid { grid-template-columns: 1fr; gap: 108px; }
-      .counter-oma { width: 112px; left: 14px; top: -90px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 44px; }
     }
 
     /* ── Die zwei Phasen ────────────────────────────────────────────────── */
@@ -367,24 +320,11 @@
           <p class="price-note">0,99 € · einmalig · keine Werbung, kein Abo, kein Konto</p>
         </div>
 
-        <!-- Signature: die App macht genau das — hier schon vor dem Kauf. -->
-        <div class="counter">
-          <img class="counter-oma" src="assets/oma-zeigt.webp" alt="" aria-hidden="true" width="132">
-          <label for="ziel">Wann darfst du aufhören?</label>
-          <input type="date" id="ziel" value="2041-10-01" min="1950-01-01" max="2099-12-31">
-
-          <div class="readout" aria-live="polite">
-            <div class="big" id="tage">5.591</div>
-            <div class="unit" id="einheit">Tage</div>
-            <p class="said oma-voice" id="spruch">Die Rente kommt. Heute leider nicht.</p>
-          </div>
-
-          <div class="breakdown">
-            <div><div class="n" id="werktage">3.994</div><div class="l">Werktage</div></div>
-            <div><div class="n" id="montage">799</div><div class="l">Montage</div></div>
-            <div><div class="n" id="zeitumstellungen">30</div><div class="l">Zeitumstellungen</div></div>
-          </div>
-        </div>
+        <figure class="hero-art">
+          <img src="assets/oma-buggy.webp" width="725" height="597" fetchpriority="high"
+               alt="Die Turbo-Oma rast mit Fliegerbrille und lachend in einem Buggy durch die Wüste — der Gehstock steckt hinten drin.">
+          <figcaption class="oma-voice">„Die Zeit rennt. Nur im Büro nicht.“</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -635,98 +575,6 @@
         }
       }
 
-      // ── Lebender Countdown ─────────────────────────────────────────────
-      var ziel        = document.getElementById("ziel");
-      var elTage      = document.getElementById("tage");
-      var elEinheit   = document.getElementById("einheit");
-      var elSpruch    = document.getElementById("spruch");
-      var elWerktage  = document.getElementById("werktage");
-      var elMontage   = document.getElementById("montage");
-      var elZeitum    = document.getElementById("zeitumstellungen");
-
-      // Zwei Pools, passend zu den zwei Phasen der App.
-      var SPRUECHE_VOR = [
-        "Die Rente kommt. Heute leider nicht.",
-        "Mach langsam. Schneller kommt die Rente nicht.",
-        "Noch nicht in Rente, aber im Kopf schon.",
-        "Gut Ding will Weile haben. Die Rente auch.",
-        "Kommt Zeit, kommt Rat. Kommt Rente, kommt Ruhe."
-      ];
-      var SPRUECHE_NACH = [
-        "Wer rastet, der rostet. Ich roste herrlich.",
-        "Feierabend. Das schönste Wort im Kalender.",
-        "Aller guten Dinge sind drei. Die Rente zählt als alle drei."
-      ];
-
-      function formatiere(n) {
-        return n.toLocaleString("de-DE");
-      }
-
-      function mitternacht(d) {
-        return new Date(d.getFullYear(), d.getMonth(), d.getDate());
-      }
-
-      // Exakt statt geschätzt: einmal durchzählen. Auch über ~40 Jahre
-      // sind das nur ~15.000 Schritte — für den Browser ein Wimpernschlag.
-      // Zeitumstellung: letzter Sonntag im März und im Oktober.
-      function istZeitumstellung(d) {
-        if (d.getDay() !== 0) { return false; }
-        var monat = d.getMonth();
-        if (monat !== 2 && monat !== 9) { return false; }
-        // Letzter Sonntag = in sieben Tagen ist der Monat vorbei.
-        var plusEineWoche = new Date(d.getTime());
-        plusEineWoche.setDate(plusEineWoche.getDate() + 7);
-        return plusEineWoche.getMonth() !== monat;
-      }
-
-      function zaehle(von, bis) {
-        var werktage = 0, montage = 0, zeitumstellungen = 0;
-        var cursor = new Date(von.getTime());
-        var tage = 0;
-        while (cursor < bis) {
-          cursor.setDate(cursor.getDate() + 1);
-          tage++;
-          var wd = cursor.getDay(); // 0 = Sonntag, 1 = Montag
-          if (wd !== 0 && wd !== 6) { werktage++; }
-          if (wd === 1) { montage++; }
-          if (istZeitumstellung(cursor)) { zeitumstellungen++; }
-        }
-        return { tage: tage, werktage: werktage, montage: montage, zeitumstellungen: zeitumstellungen };
-      }
-
-      function aktualisiere() {
-        var eingabe = ziel.value;
-        if (!eingabe) { return; }
-
-        var teile = eingabe.split("-");
-        var zielTag = new Date(+teile[0], +teile[1] - 1, +teile[2]);
-        if (isNaN(zielTag.getTime())) { return; }
-
-        var heute = mitternacht(new Date());
-        var inRente = zielTag <= heute;
-        var von = inRente ? zielTag : heute;
-        var bis = inRente ? heute : zielTag;
-
-        var r = zaehle(von, bis);
-        var pool = inRente ? SPRUECHE_NACH : SPRUECHE_VOR;
-
-        elTage.textContent      = formatiere(r.tage);
-        elEinheit.textContent   = inRente ? "Tage in Rente" : (r.tage === 1 ? "Tag" : "Tage");
-        elSpruch.textContent    = "„" + pool[r.tage % pool.length] + "“";
-        elWerktage.textContent = formatiere(r.werktage);
-        elMontage.textContent  = formatiere(r.montage);
-        elZeitum.textContent   = formatiere(r.zeitumstellungen);
-
-        // Im Ruhestand zählt die App aufwärts — und misst Genossenes, nicht Restzeit.
-        var labels = document.querySelectorAll(".breakdown .l");
-        labels[0].textContent = inRente ? "Freie Werktage" : "Werktage";
-        labels[1].textContent = inRente ? "Verschlafene Montage" : "Montage";
-        labels[2].textContent = "Zeitumstellungen";
-      }
-
-      ziel.addEventListener("input", aktualisiere);
-      ziel.addEventListener("change", aktualisiere);
-      aktualisiere();
     })();
   </script>
 </body>

@@ -173,19 +173,20 @@
     .gift-art figcaption { margin-top: 14px; font-size: 16px; color: var(--ink); }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-      /* Bild bleibt als Geschenk-Visual oben, aber kompakt statt bildschirm-
-         füllend — sonst rutscht die Headline unter den Falz. */
+      .hero-grid { grid-template-columns: 1fr; gap: 20px; }
+      /* Oma grüßt weiterhin zuerst — aber als kompaktes Willkommens-Bild,
+         nicht bildschirmfüllend, damit die Headline gleich danach kommt. */
       .gift-art { order: -1; }
-      .gift-art img { max-height: 300px; }
+      .gift-art img { max-height: 190px; }
+      .gift-art figcaption { margin-top: 8px; }
     }
     @media (max-width: 560px) {
       .section { padding: 54px 0; }
       .section-head { margin-bottom: 32px; }
-      .hero { padding-top: 24px; padding-bottom: 48px; }
-      .hero-grid { gap: 18px; }
-      .gift-art img { max-height: 220px; }
-      .gift-art figcaption { margin-top: 10px; font-size: 15px; }
+      .hero { padding-top: 20px; padding-bottom: 48px; }
+      .hero-grid { gap: 14px; }
+      .gift-art img { max-height: 140px; }
+      .gift-art figcaption { margin-top: 8px; font-size: 14px; }
       .stores .store-btn { flex: 1 1 150px; }
     }
 

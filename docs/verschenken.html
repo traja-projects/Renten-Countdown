@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <title>Renten Countdown verschenken — dir wurde der Ruhestand geschenkt</title>
+  <title>Renten Countdown verschenken — die Rente ist dir gegönnt</title>
   <meta name="description" content="Jemand findet, du bist reif für die Couch. Der ehrlichste Countdown bis zur Rente — mit einem frechen Spruch der Turbo-Oma. Ein Geschenk, das Tag für Tag zählt.">
   <link rel="canonical" href="https://traja-projects.github.io/Renten-Countdown/verschenken.html">
   <link rel="icon" href="assets/icon-512.png">
@@ -173,13 +173,19 @@
     .gift-art figcaption { margin-top: 14px; font-size: 16px; color: var(--ink); }
 
     @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+      /* Bild bleibt als Geschenk-Visual oben, aber kompakt statt bildschirm-
+         füllend — sonst rutscht die Headline unter den Falz. */
       .gift-art { order: -1; }
+      .gift-art img { max-height: 300px; }
     }
     @media (max-width: 560px) {
       .section { padding: 54px 0; }
       .section-head { margin-bottom: 32px; }
-      .hero { padding-top: 30px; padding-bottom: 48px; }
+      .hero { padding-top: 24px; padding-bottom: 48px; }
+      .hero-grid { gap: 18px; }
+      .gift-art img { max-height: 220px; }
+      .gift-art figcaption { margin-top: 10px; font-size: 15px; }
       .stores .store-btn { flex: 1 1 150px; }
     }
 
@@ -250,7 +256,7 @@
       <div class="hero-grid">
         <div>
           <p class="eyebrow gold">Ein Geschenk für dich</p>
-          <h1 id="gift-headline">Dir wurde der Ruhestand geschenkt.</h1>
+          <h1 id="gift-headline">Die Rente ist dir gegönnt. Zähl schon mal mit.</h1>
           <p class="gift-tag" id="gift-tag">Für dich — weil die Rente ruft und du längst zurückwinkst.</p>
           <p class="lede">
             Jemand findet, du hast dir den Feierabend verdient. Also bekommst du den ehrlichsten

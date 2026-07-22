@@ -79,7 +79,7 @@ Bald im App Store und im Play Store — **einmaliger Kauf für 0,99 €, kein Ab
 
 ## Impressum & Kontakt
 
-Bao Anh Tran · Nürnberg · [tran-bao-anh@outlook.de](mailto:tran-bao-anh@outlook.de)
+Bao Anh Tran · Nürnberg · [traja.projects@gmail.com](mailto:traja.projects@gmail.com)
 
 Vollständige Angaben im [Impressum](https://traja-projects.github.io/Renten-Countdown/impressum.html).
 
